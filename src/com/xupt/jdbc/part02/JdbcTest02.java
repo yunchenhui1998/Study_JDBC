@@ -14,7 +14,7 @@ public class JdbcTest02 {
             Statement s=c.createStatement()
         ){
             long start1=System.currentTimeMillis();
-            for(int i=1;i<=10000;i++){
+            for(int i=1;i<=10;i++){
                 String str="insert into hero values(null,"+"'name"+i+"',"+313.0f+","+55+")";
                 s.execute(str);
             }
@@ -28,7 +28,7 @@ public class JdbcTest02 {
             PreparedStatement ps=c.prepareStatement(sql)
         ){
             long start2=System.currentTimeMillis();
-            for(int i=1;i<=10000;i++){
+            for(int i=1;i<=10;i++){
                 ps.setString(1,"Hero"+i);
                 ps.setFloat(2,313.0f);
                 ps.setInt(3,55);
